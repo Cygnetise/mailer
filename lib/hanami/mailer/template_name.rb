@@ -12,7 +12,7 @@ module Hanami
       # @since next
       # @api unstable
       def self.call(name, namespace)
-        Utils::String.underscore(name.gsub(/\A#{namespace}(::)*/, ""))
+        CygHanami::Utils::String.underscore(name.gsub(/\A#{namespace}(::)*/, ""))
       end
 
       class << self

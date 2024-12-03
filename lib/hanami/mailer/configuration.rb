@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require "set"
-require "hanami/utils/kernel"
+require "cyg_hanami/utils/kernel"
 require "hanami/mailer/template_name"
 require "hanami/mailer/templates_finder"
 
@@ -98,7 +98,7 @@ module Hanami
       #     config.root = 'path/to/templates'
       #   end
       def root=(value)
-        @root = Utils::Kernel.Pathname(value).realpath
+        @root = CygHanami::Utils::Kernel.Pathname(value).realpath
       end
 
       # @!attribute [r] root

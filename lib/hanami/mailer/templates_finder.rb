@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require "hanami/mailer/template"
-require "hanami/utils/file_list"
+require "cyg_hanami/utils/file_list"
 require "pathname"
 
 module Hanami
@@ -101,7 +101,7 @@ module Hanami
         root_path = [root, lookup, template_name].join(separator)
         search_path = "#{format_separator}#{format}#{format_separator}#{engines}"
 
-        Utils::FileList["#{root_path}#{search_path}"]
+        CygHanami::Utils::FileList["#{root_path}#{search_path}"]
       end
 
       # @api unstable
